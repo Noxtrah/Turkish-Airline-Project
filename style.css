@@ -1,3 +1,10 @@
+:root{
+  --font-family-300: 'MuseoSans-300', sans-serif;
+  --font-weight-300: 400;
+  --font-family-700: 'MuseoSans-700', sans-serif;
+  --font-weight-700: 700;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -182,6 +189,7 @@ body{
     display: flex;
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
+    flex-direction: column;
 }
 
 .booker-buttons{
@@ -191,6 +199,7 @@ body{
     /* background-color:aquamarine; */
     margin-top: 100px;
     text-align: center;
+    gap: 5px;
 }
 
 .booker-buttons-item1{
@@ -199,6 +208,22 @@ body{
     width: 110px;
     background-color: #fff;
     border-radius: 4px;
+}
+
+.booker-buttons-item2{
+  list-style: none;
+  height: 50px;
+  width: 260px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.booker-buttons-item3{
+  list-style: none;
+  height: 50px;
+  width: 150px;
+  background-color: #fff;
+  border-radius: 4px;
 }
 
 .booker-button{
@@ -235,7 +260,7 @@ body{
     border: none;
 }
 
-.booker-button-image-span {
+.booker-button-image-span1 {
     width: 24px;
     height: 12px;
     background-image: url("https://www.turkishairlines.com/assets/tab-plane-gray-22046b88.svg");
@@ -243,8 +268,87 @@ body{
     vertical-align: middle;
 }
 
-.booker-button.active .booker-button-image-span {
+.booker-button.active .booker-button-image-span1 {
     background-image: url("https://www.turkishairlines.com/assets/tab-plane-red-6945123e.svg");
     width: 24px;
     height: 12px;
+}
+
+.booker-button-image-span2 {
+  width: 22px;
+  height: 21px;
+  background-image: url("https://www.turkishairlines.com/assets/tab-manage-your-booking-gray-c216924a.svg");
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.booker-button.active .booker-button-image-span2 {
+  background-image: url("https://www.turkishairlines.com/assets/tab-manage-your-booking-red-96773a7b.svg");
+  width: 22px;
+  height: 21px;
+}
+
+.booker-button-image-span3 {
+  width: 24px;
+  height: 16px;
+  background-image: url("https://www.turkishairlines.com/assets/tab-flight-status-gray-9e75c97b.svg");
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.booker-button.active .booker-button-image-span3 {
+  background-image: url("	https://www.turkishairlines.com/assets/tab-flight-status-red-197c9588.svg");
+  width: 24px;
+  height: 16px;
+}
+
+.tab-content{
+  position: relative;
+  width:990px;
+  height: auto;
+  background-color: #fff;
+}
+
+.flight-radio-buttons {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #00548a;
+  background-color: #fff;
+  cursor: pointer;
+  margin: 26px 6px -3px 14px;
+}
+
+.flight-radio-buttons:first-child{
+  margin-left: 26px;
+}
+
+/* Styles for the inner circle */
+.flight-radio-buttons.active::after {
+  content: '';
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  z-index: 11;
+  background-color: #00548a;
+  opacity: 1;
+  display: block;
+  transform: scale(.5);
+  transition: .15s transform cubic-bezier(.07,.82,.44,1.23);
+}
+
+/* Styles for checked state */
+.flight-radio-buttons:checked::after {
+  transform: scale(1);
+}
+
+.flight-radio-buttons-labels{
+  font-family: var(--font-family-300);
+  font-weight: var(--font-weight-700);
+  font-size: 14px;
 }
