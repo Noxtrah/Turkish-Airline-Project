@@ -194,7 +194,7 @@ body{
 
 .booker-buttons{
     display: flex;
-    height: 50px;
+    height: 45px;
     width: 990px;
     /* background-color:aquamarine; */
     margin-top: 100px;
@@ -233,7 +233,7 @@ body{
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    color: #647281;
     /* border-radius: 4px; */
     transition: background-color 0.3s;
     border-radius: 16px 16px 0 0;
@@ -252,6 +252,10 @@ body{
     font-size: 14px;
     display: inline-block;
     vertical-align: middle;
+}
+
+.booker-button.active{
+  background-color: #fff;
 }
 
 .booker-button.active .booker-button-text-span {
@@ -307,6 +311,7 @@ body{
   width:990px;
   height: auto;
   background-color: #fff;
+  box-shadow: 0 6px 6px #0000001f;
 }
 
 .flight-radio-buttons {
@@ -318,7 +323,7 @@ body{
   border: 2px solid #00548a;
   background-color: #fff;
   cursor: pointer;
-  margin: 26px 6px -3px 14px;
+  margin: 30px 6px -3px 14px;
 }
 
 .flight-radio-buttons:first-child{
@@ -351,4 +356,126 @@ body{
   font-family: var(--font-family-300);
   font-weight: var(--font-weight-700);
   font-size: 14px;
+}
+
+.award-ticket-div {
+  position: relative;
+  display: inline-block;
+  margin-inline-start: 200px;
+  margin-bottom: 13px;
+  border-bottom: 3px solid transparent; /* Initial value */
+  transition: border-color 0.3s ease; /* Only transition border-color */
+  box-sizing: border-box; /* Include border in element's dimensions */
+}
+
+.award-ticket-div:hover {
+  cursor: pointer;
+  border-bottom-color: #e81932; /* Change border color on hover */
+}
+
+.award-ticket-icon{
+  height: 23px;
+  width: 23px;
+  vertical-align:middle;
+}
+
+.award-ticket-span{
+  font-size: 14px;
+  font-family: var(--font-family-700);
+  font-weight: var(--font-weight-700);
+}
+
+.origin-selector{
+  background: #f4f6f8;
+  border-radius: 3px;
+  box-shadow: none;
+  border: none;
+  position: relative;
+  margin-left: 26px;
+  display: flex;
+  width: 190px;
+  height: 64px;
+}
+
+.origin-label{
+  display: inline;
+  color: #647281;
+  font-size: 11px;
+  margin-top: 6px;
+  margin-left: 15px;
+  position: absolute;
+  height: 11px;
+  font-family: var(--font-family-700);
+  font-weight: var(--font-weight-700);
+}
+
+.origin-label2{
+  display: inline;
+  color: #647281;
+  font-size: 11px;
+  margin-top: 46px;
+  margin-left: 15px;
+  position: absolute;
+  height: 11px;
+  font-family: var(--font-family-700);
+  font-weight: var(--font-weight-700);
+}
+
+.port-wrapper{
+  flex: 8;
+  position: relative;
+  max-width: 80%;
+  cursor: default;
+  padding: 20px 0 20px 15px;
+  height: 66px;
+  margin-top: 4px;
+  color: #212529;
+}
+
+.origin-input{
+  display: block;
+  opacity: 0;
+}
+
+.origin-input-value {
+  font-family: var(--font-family-700);
+  font-weight: var(--font-weight-700);
+}
+
+.change-ports-icon{
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-30%, -50%);
+  background-image: url(https://www.turkishairlines.com/assets/change-ports-icon-492743c0.svg);
+  width: 33px;
+  height: 33px;
+  vertical-align: middle;
+  z-index: 1;
+}
+
+.destination-selector{
+  background: #f4f6f8;
+  border-radius: 3px;
+  box-shadow: none;
+  border: none;
+  position: relative;
+  margin-left: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 190px;
+}
+
+.destination-label {
+  display: inline;
+  color: #647281;
+  font-size: 20px;
+  position: absolute;
+  left: 20px; /* Position at the leftmost edge */
+  top: 50%; /* Align to the middle vertically */
+  transform: translateY(-50%); /* Vertically center */
+  height: 11px;
+  font-family: var(--font-family-300);
+  font-weight: 500;
 }
