@@ -102,7 +102,72 @@ function handleFlightButton(){
         destinationLabel.classList.add('destination-label');
         destinationSelector.appendChild(destinationLabel);
 
+        const datesSelector = createDiv('dates-selector');
+        originSelector.appendChild(datesSelector);
+
+        const datesSpanElement = document.createElement('span');
+
+        const datesImgElement = document.createElement('img');
+        datesImgElement.classList.add('dates-icon');
+        datesImgElement.src = 'https://www.turkishairlines.com/assets/booking-calendar-gray-17ffc0da.svg';
+
+        datesSpanElement.appendChild(datesImgElement);
+        datesSelector.appendChild(datesSpanElement);
+
+        const datesLabel = createLabel('Dates');
+        datesLabel.classList.add('dates-label')
+        datesSelector.appendChild(datesLabel);
+
+        const passengersSelector = createDiv('passengers-selector');
+
+        const passengersLabel = createLabel('Passengers');
+        passengersLabel.classList.add('passengers-label');
+        passengersSelector.appendChild(passengersLabel);
+
+        const passengersPortWrapper = createDiv('passengers-port-wrapper');
+        passengersSelector.appendChild(passengersPortWrapper);
+
+        const passengersInput = document.createElement('input');
+        passengersInput.classList.add('passengers-input');
+        passengersInput.value = '1\u00A0Passenger';
+
+        const passengersInputValue = document.createElement('span');
+        passengersInputValue.classList.add('passengers-input-value');
+        passengersInputValue.textContent = passengersInput.value;
+
+        passengersPortWrapper.appendChild(passengersInputValue);
+
+        const passengersLabel2 = createLabel('ECO');
+        passengersLabel2.classList.add('passengers-label2');
+        passengersSelector.appendChild(passengersLabel2);
+
+        originSelector.appendChild(passengersSelector);
+
+        const searchFlightsSelector = createDiv('search-flights-selector');
+        originSelector.appendChild(searchFlightsSelector);
+
+        const searchFlightsSpanElement = document.createElement('span');
+
+        const searchFlightsImgElement = document.createElement('img');
+        searchFlightsImgElement.classList.add('search-flights-icon');
+        searchFlightsImgElement.src = 'https://www.turkishairlines.com/assets/search-flights-right-arrow-8cc5925c.svg';
+
+        searchFlightsSpanElement.appendChild(searchFlightsImgElement);
+        searchFlightsSelector.appendChild(searchFlightsSpanElement);
+
+        const searchFlightsLabel = createLabel('Search flights');
+        searchFlightsLabel.classList.add('search-flights-label')
+        searchFlightsSelector.appendChild(searchFlightsLabel);
+
+        const recentSearchesDiv = createDiv('recent-searches-div');
+
+        const recentSearchesLabel = createLabel('Recent searches');
+        recentSearchesLabel.classList.add('recent-searches-label');
+
+        recentSearchesDiv.appendChild(recentSearchesLabel);
+
         tabContent.appendChild(originSelector);
+        tabContent.appendChild(recentSearchesDiv);
 
         resolve();
     });
