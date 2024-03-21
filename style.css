@@ -640,3 +640,148 @@ body{
   cursor: pointer;
   border-bottom-color: #e81932; /* Change border color on hover */
 }
+
+.schedule-boxes{
+  box-shadow: 0 4px 8px #0000001f;
+  margin-top: 160px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 990px;
+}
+
+.schedule-boxes-tabs{
+  display: flex;
+  list-style: none;
+}
+
+.schedule-boxes-tab{
+  /* border-left: 1px solid #dae0e8; */
+  border-right: 1px solid #dae0e8;
+  width: 100%;
+}
+
+.schedule-boxes-tab:hover{
+  box-shadow: 0 4px 4px #232b384d;
+}
+
+.schedule-boxes-content{
+  padding: 10px 10px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border-right: 1px solid #647281; */
+}
+
+.schedule-box-img{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #dae0e8;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.schedule-box-info{
+  font-size: 12px;
+  color: #232b38;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-family: var(--font-family-300);
+  font-weight: var(--font-weight-700);
+}
+
+.schedule-boxes-tab:hover .schedule-box-info{
+  color: #e81932;
+}
+
+.seat-selection-img{
+  background-image: url("https://www.turkishairlines.com/assets/koltuk-new-fe035456.svg");
+  height: 21px;
+  width: 22px;
+  margin:30% 50% 50% 30%;
+  /* transform: translateX(-100%); */
+  /* background-image: url("https://www.turkishairlines.com/assets/tab-plane-red-6945123e.svg"); */
+}
+
+.extra-baggage-img{
+  background-image: url("https://www.turkishairlines.com/assets/bagaj-new-550360c3.svg");
+  height: 21px;
+  width: 12px;
+  margin:30% 50% 50% 38%;
+}
+
+.book-a-hotel-img{
+  background-image: url("https://www.turkishairlines.com/assets/otel-new-cdb9bcea.svg");
+  height: 15px;
+  width: 22px;
+  margin:35% 50% 50% 30%;
+}
+
+.rent-a-car-img{
+  background-image: url("https://www.turkishairlines.com/assets/arac-new-f2c45c70.svg");
+  height: 17px;
+  width: 20px;
+  margin:30% 50% 50% 30%;
+}
+
+.travel-insurance-img{
+  background-image: url("https://www.turkishairlines.com/assets/travelinsurance-new-3f1c3da2.svg");
+  height: 24px;
+  width: 20px;
+  margin:30% 50% 50% 30%;
+}
+
+.gift-card-img{
+  background-image: url("https://www.turkishairlines.com/assets/giftcard-new-6b45e73f.svg");
+  height: 20px;
+  width: 20px;
+  margin:30% 50% 50% 30%;
+}
+
+.slide-show-container{
+  margin-top: 40px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 990px;
+  border-radius: 5px;
+  border: 1px dashed #2e8ffd;
+  padding: 15px 15px 35px;
+}
+
+.media{
+  /* margin-left: 20px;
+  margin-top: 10px; */
+}
+
+.media-body{
+  margin-top:10px;
+  font-size: 14px;
+  font-family: var(--font-family-700);
+  font-weight: var(--font-weight-700);
+}
+
+.warning-icon{
+  vertical-align: bottom;
+  padding-right: 10px;
+  font-size: 20px;
+}
+
+.media-content{
+  margin-top: 10px;
+  margin-left: 30px;
+  font-size: 14px;
+  font-family: var(--font-family-300);
+  font-weight: var(--font-weight-300);
+}
+
+.media-page-link{
+  text-decoration: none;
+  color: #e81932;
+  font-family: var(--font-family-300);
+  font-weight: var(--font-weight-700);
+}
