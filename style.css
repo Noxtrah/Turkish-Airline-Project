@@ -14,6 +14,13 @@
 body{
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 }
+
+.header{
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
 .linkbar {
     list-style-type: none;
     margin: 0;
@@ -895,8 +902,14 @@ body{
   display: inline-block;
   margin-top: 10px;
   text-align: center;
-  margin-left: 440px;
+  margin-left: 23vw;
   /* transform: translateX(50%); */
+}
+
+@media only screen and (max-width: 1600px) {
+  .best-offers-span {
+    margin-left: 13vw;
+  }
 }
 
 .best-offers-link{
@@ -946,10 +959,15 @@ body{
   display: flex;
   margin: 60px auto 0;
   justify-content: center;
-  border-top: 1px solid #e2e2e2;
-  padding-top: 40px;
   max-width: 1000px;
   gap:60px;
+}
+
+.border-hr{
+  margin-top: 60px;
+  height: 0px;
+  border: none;
+  border-top: 1px solid #e2e2e2;
 }
 
 .slider-columns{
@@ -977,10 +995,12 @@ body{
 .slider-column-info{
   font-family: "Railway", sans-serif;
   font-weight: lighter;
+  color:rgb(123, 120, 120);
+  line-height: 20px;
 }
 
 .slider-link{
-  font-size: 16px;
+  font-size: 13px;
   font-family: var(--font-family-700);
   font-weight: 700;
   color: #e81932;
@@ -989,4 +1009,168 @@ body{
   display: block;
   position: relative;
   padding-top: 10px;
+}
+
+.awards-blocks{
+  display: flex;
+  margin-top:30px;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  gap: 80px;
+  margin-bottom: -35px;
+}
+
+.award-block{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.sponsorship-blocks{
+  display: flex;
+  margin-top:30px;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  gap: 170px;
+  margin-bottom: -35px;
+}
+
+.section-footer{
+  margin-top: 60px;
+}
+
+.social-media-container{
+  position: relative;
+  display: flex;
+  background-color: #232b38;
+  border-top: 1px solid #e6e6e6;
+}
+
+.social-media-list{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.social-media-item{
+  margin: 15px 10px;
+  padding: 0;
+  font-size: 20px;
+  display: inline-block;
+  color: #c3cbd7;
+}
+
+.social-media-link{
+  display: inline-block;
+}
+
+.fa {
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #c3cbd7;
+  margin: 7px 0px 0px 0px;
+}
+
+.fa:hover {
+  color: #0a58ca;
+}
+
+.social-media-link svg {
+  fill: #c3cbd7;
+  margin: 7px 0px 0px 0px;
+}
+
+.social-media-link svg:hover{
+  fill: #0a58ca;
+}
+
+.turkish-airlines-blog{
+  display: block;
+  margin-top: 10px;
+  margin-left: -2px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUCAYAAACAl21KAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyVpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ4IDc5LjE2NDAzNiwgMjAxOS8wOC8xMy0wMTowNjo1NyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjEgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDBEMDJCMzQzRDMxMTFFQjk0MkNGRDFDNjdGRTU0MEUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDBEMDJCMzUzRDMxMTFFQjk0MkNGRDFDNjdGRTU0MEUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0MEQwMkIzMjNEMzExMUVCOTQyQ0ZEMUM2N0ZFNTQwRSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0MEQwMkIzMzNEMzExMUVCOTQyQ0ZEMUM2N0ZFNTQwRSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtO2dGwAAAIVSURBVHjarNRNSFRhFMZxRy+aRFlCgkyBRSERhqEpRa5aFVIoZQsrCAw/QMFcKKZiGEVpWuBGqVzkqo9FpIWUUGAtRDMdyo+IMsOkkppAK6Sm/4Fn4jLo0MILP3B87zxz7nnPez2BQCBiOS6nb2As9H/RSMEB7MZWrMQ0BvEAPfiGP/+CXAEebMIZ5OAXJtCLH0jAHq19wQXcwFxo0EFc10I1OjEbUm2kqixHi/4uhT8YlI6bGMEhvFuiFfYofVKAK6r2lAWtxmW8wX58+s/+XkUcmuCzUvchE2UKeey62X4gNUzYJfSjyoKOqJqHWtwF28oSV1+68RK5KMao2mBXO1bZTWl47voVn6rI1+d12kHbjDwcww781voTTDp6zu+uoEEFt2IDZhCFu6hEEl5gs+73Y97RY21xBRUu0osTqnISXUjGU61tx3oLeoSTWIuvSzQ1C42asVH1s0NrRfBGajotsCbM7rzHCqzRkWnXjgXXWi3gFS5qWu/g2SJBw+qbF0dxGA06VrW2s8HJtmbH4mOYib6HNh3ms9q1OrWjwdHJtnG/hbc4rm3+gPs6Ln61wJp8TrN1HjtxGvEWtFe79hnjSMQUtmlmFlRRsSqwUahHhk6EtSbHgir0DrL027iGIcRgo/pi1wB+2nHQQbXvvUazBTsafZ8CRlSBXfN6/iF9Dr5KF1SR9TRbzZ71LNer9q8AAwD4RoqdaC3EewAAAABJRU5ErkJggg==");
+  height: 19px;
+  width: 19px;
+}
+
+.turkish-airlines-blog:hover svg{
+  fill: #0a58ca;
+  color: #0a58ca;
+}
+
+.footer-content-main{
+  background-color: #181c23;
+}
+
+.footer-content-buttons{
+  display: flex;
+  justify-content: center;
+  height: 70px;
+  border-bottom: 1px solid gray;
+}
+
+.footer-content-button{
+  background-color: #181c23;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 4.875px 9.75px;
+  color: #fff;
+  position: relative;
+  font-size: 11px;
+  height: 100%;
+  min-width: 90px;
+  border-left: 1px solid #232b38;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.footer-content-button a{
+  color:#FFFFFF;
+  font-size: 11px;
+  font-family: var(--font-family-700);
+  font-weight: var(--font-weight-700);
+  text-decoration: none;
+}
+
+.button-down-arrow{
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer-bottom{
+  padding: 36px 0 36px 0;
+  background-color: #181c23;
+}
+
+.footer-nav-items{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin-left: auto; /* Center the container by pushing it to the right */
+  margin-right: auto; /* Center the container by pushing it to the left */
+  justify-content: center;
+  /* gap: 30px; */
+}
+
+.footer-nav-item a{
+  text-decoration: none;
+  color: #c3cbd7;
+  font-size: 11px;
+  font-weight: var(--font-weight-300);
+  margin-right:30px;
+  line-height: 30px;
+}
+
+.footer-nav-item:hover a{
+  color: #fff;
+  border-bottom: 1px dashed #fff;
 }
